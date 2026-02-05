@@ -1,3 +1,4 @@
+
 <?php
 
 use Illuminate\Http\Request;
@@ -47,12 +48,11 @@ Route::middleware(['auth:sanctum'])->prefix('v1')->group(function () {
     // Cart routes
     Route::prefix('cart')->group(function () {
         Route::get('/', [CartController::class, 'index']);
-        Route::post('/add', [CartController::class, 'store']);
+        Route::post('/add', [CartController::class, 'add']);
         Route::put('/update/{id}', [CartController::class, 'update']);
-        Route::delete('/remove/{id}', [CartController::class, 'destroy']);
+        Route::delete('/remove/{id}', [CartController::class, 'remove']);
         Route::delete('/clear', [CartController::class, 'clear']);
     });
-
     // Admin only routes
     Route::middleware(['admin'])->group(function () {
         // Product management

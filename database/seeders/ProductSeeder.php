@@ -3,7 +3,6 @@
 namespace Database\Seeders;
 
 use App\Models\Product;
-use App\Models\Category;
 use Illuminate\Database\Seeder;
 
 class ProductSeeder extends Seeder
@@ -11,7 +10,7 @@ class ProductSeeder extends Seeder
     public function run(): void
     {
         $products = [
-            // ========== LAPTOP (Category ID: 1) ==========
+            // ========== LAPTOP (Category ID: 1) ========== (5 produk)
             [
                 'name' => 'ASUS ROG Zephyrus G14 GA402',
                 'description' => 'Laptop gaming 14" dengan RTX 4060, AMD Ryzen 9 7940HS, 16GB RAM, 1TB SSD, layar QHD 165Hz',
@@ -29,7 +28,7 @@ class ProductSeeder extends Seeder
                     'battery' => '76Wh',
                     'weight' => '1.72kg'
                 ]),
-                'image_url' => 'https://example.com/images/asus-rog-g14.jpg',
+                'image_url' => 'https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=600&h=400&fit=crop',
                 'is_active' => true,
             ],
             [
@@ -49,7 +48,7 @@ class ProductSeeder extends Seeder
                     'battery' => '80Wh',
                     'weight' => '2.5kg'
                 ]),
-                'image_url' => 'https://example.com/images/lenovo-legion-5-pro.jpg',
+                'image_url' => 'https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=600&h=400&fit=crop',
                 'is_active' => true,
             ],
             [
@@ -69,7 +68,7 @@ class ProductSeeder extends Seeder
                     'battery' => '66.5Wh (up to 18 hours)',
                     'weight' => '1.51kg'
                 ]),
-                'image_url' => 'https://example.com/images/macbook-air-m3.jpg',
+                'image_url' => 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=600&h=400&fit=crop',
                 'is_active' => true,
             ],
             [
@@ -89,11 +88,133 @@ class ProductSeeder extends Seeder
                     'battery' => '90Wh',
                     'weight' => '2.6kg'
                 ]),
-                'image_url' => 'https://example.com/images/acer-predator-helios.jpg',
+                'image_url' => 'https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=600&h=400&fit=crop',
+                'is_active' => true,
+            ],
+            [
+                'name' => 'Dell XPS 15 9530',
+                'description' => 'Laptop premium 15.6" 4K OLED, Intel i7-13700H, RTX 4070, 32GB RAM, 1TB SSD',
+                'price' => 32999000,
+                'stock' => 6,
+                'category_id' => 1,
+                'brand' => 'Dell',
+                'specifications' => json_encode([
+                    'processor' => 'Intel Core i7-13700H',
+                    'graphics' => 'NVIDIA GeForce RTX 4070 8GB GDDR6',
+                    'ram' => '32GB DDR5 4800MHz',
+                    'storage' => '1TB NVMe PCIe 4.0 SSD',
+                    'display' => '15.6" 4K OLED Touch, 100% DCI-P3',
+                    'os' => 'Windows 11 Pro',
+                    'battery' => '86Wh',
+                    'weight' => '1.8kg'
+                ]),
+                'image_url' => 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&h=400&fit=crop',
                 'is_active' => true,
             ],
 
-            // ========== PROCESSOR (Category ID: 3) ==========
+            // ========== KOMPUTER DESKTOP (Category ID: 2) ========== (5 produk)
+            [
+                'name' => 'ASUS ROG Strix G35DX Gaming Desktop',
+                'description' => 'PC Gaming Intel i9-14900KF, RTX 4090, 64GB RAM, 2TB SSD + 4TB HDD, Liquid Cooling',
+                'price' => 69999000,
+                'stock' => 3,
+                'category_id' => 2,
+                'brand' => 'ASUS',
+                'specifications' => json_encode([
+                    'processor' => 'Intel Core i9-14900KF',
+                    'graphics' => 'NVIDIA GeForce RTX 4090 24GB',
+                    'ram' => '64GB DDR5 6000MHz',
+                    'storage' => '2TB NVMe SSD + 4TB HDD',
+                    'psu' => '1000W 80+ Platinum',
+                    'cooling' => '360mm Liquid Cooling',
+                    'os' => 'Windows 11 Home',
+                    'ports' => 'USB 3.2, Thunderbolt 4, WiFi 6E'
+                ]),
+                'image_url' => 'https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=600&h=400&fit=crop',
+                'is_active' => true,
+            ],
+            [
+                'name' => 'HP Pavilion Gaming Desktop TG01',
+                'description' => 'PC Gaming AMD Ryzen 7 5700G, RTX 4060, 16GB RAM, 512GB SSD, Windows 11',
+                'price' => 15999000,
+                'stock' => 10,
+                'category_id' => 2,
+                'brand' => 'HP',
+                'specifications' => json_encode([
+                    'processor' => 'AMD Ryzen 7 5700G',
+                    'graphics' => 'NVIDIA GeForce RTX 4060 8GB',
+                    'ram' => '16GB DDR4 3200MHz',
+                    'storage' => '512GB NVMe SSD',
+                    'psu' => '500W 80+ Bronze',
+                    'cooling' => 'Air Cooling',
+                    'os' => 'Windows 11 Home',
+                    'ports' => 'USB 3.2, HDMI, DisplayPort'
+                ]),
+                'image_url' => 'https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=600&h=400&fit=crop',
+                'is_active' => true,
+            ],
+            [
+                'name' => 'Lenovo Legion T5 Gaming Desktop',
+                'description' => 'PC Gaming Intel i7-14700KF, RTX 4070 Ti, 32GB RAM, 1TB SSD, ARGB Lighting',
+                'price' => 28999000,
+                'stock' => 7,
+                'category_id' => 2,
+                'brand' => 'Lenovo',
+                'specifications' => json_encode([
+                    'processor' => 'Intel Core i7-14700KF',
+                    'graphics' => 'NVIDIA GeForce RTX 4070 Ti 12GB',
+                    'ram' => '32GB DDR5 5600MHz',
+                    'storage' => '1TB NVMe PCIe 4.0 SSD',
+                    'psu' => '750W 80+ Gold',
+                    'cooling' => '240mm AIO Liquid Cooler',
+                    'os' => 'Windows 11 Home',
+                    'ports' => 'USB 3.2, WiFi 6, Bluetooth 5.2'
+                ]),
+                'image_url' => 'https://images.unsplash.com/photo-1541140532154-b024d705b90a?w=600&h=400&fit=crop',
+                'is_active' => true,
+            ],
+            [
+                'name' => 'Dell Alienware Aurora R15',
+                'description' => 'Gaming Desktop AMD Ryzen 9 7900X, RTX 4080, 32GB RAM, 2TB SSD, Lunar Light',
+                'price' => 42999000,
+                'stock' => 4,
+                'category_id' => 2,
+                'brand' => 'Dell',
+                'specifications' => json_encode([
+                    'processor' => 'AMD Ryzen 9 7900X',
+                    'graphics' => 'NVIDIA GeForce RTX 4080 16GB',
+                    'ram' => '32GB DDR5 5200MHz',
+                    'storage' => '2TB NVMe SSD',
+                    'psu' => '1000W 80+ Platinum',
+                    'cooling' => 'Cryo-Tech Liquid Cooling',
+                    'os' => 'Windows 11 Home',
+                    'ports' => 'USB 3.2, Thunderbolt 4, Ethernet 2.5G'
+                ]),
+                'image_url' => 'https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=600&h=400&fit=crop',
+                'is_active' => true,
+            ],
+            [
+                'name' => 'Acer Predator Orion 5000',
+                'description' => 'Gaming Desktop Intel i5-14600KF, RTX 4060 Ti, 16GB RAM, 1TB SSD, FrostBlade Cooling',
+                'price' => 21999000,
+                'stock' => 8,
+                'category_id' => 2,
+                'brand' => 'Acer',
+                'specifications' => json_encode([
+                    'processor' => 'Intel Core i5-14600KF',
+                    'graphics' => 'NVIDIA GeForce RTX 4060 Ti 8GB',
+                    'ram' => '16GB DDR5 4800MHz',
+                    'storage' => '1TB NVMe SSD',
+                    'psu' => '650W 80+ Gold',
+                    'cooling' => 'FrostBlade Air Cooling',
+                    'os' => 'Windows 11 Home',
+                    'ports' => 'USB 3.2, HDMI, DisplayPort, WiFi 6'
+                ]),
+                'image_url' => 'https://images.unsplash.com/photo-1556438064-2d7646166914?w=600&h=400&fit=crop',
+                'is_active' => true,
+            ],
+
+            // ========== PROCESSOR (Category ID: 3) ========== (5 produk)
             [
                 'name' => 'Intel Core i9-14900K',
                 'description' => 'Processor Intel Core i9 gen 14, 24 core (8P+16E), up to 6.0GHz, 36MB cache',
@@ -111,7 +232,7 @@ class ProductSeeder extends Seeder
                     'tdp' => '125W',
                     'graphics' => 'Intel UHD Graphics 770'
                 ]),
-                'image_url' => 'https://example.com/images/i9-14900k.jpg',
+                'image_url' => 'https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=600&h=400&fit=crop',
                 'is_active' => true,
             ],
             [
@@ -131,7 +252,7 @@ class ProductSeeder extends Seeder
                     'tdp' => '120W',
                     'graphics' => 'AMD Radeon Graphics'
                 ]),
-                'image_url' => 'https://example.com/images/ryzen-7950x3d.jpg',
+                'image_url' => 'https://images.unsplash.com/photo-1587202372637-5bfb5d5a8d70?w=600&h=400&fit=crop',
                 'is_active' => true,
             ],
             [
@@ -151,193 +272,51 @@ class ProductSeeder extends Seeder
                     'tdp' => '125W',
                     'graphics' => 'Intel UHD Graphics 770'
                 ]),
-                'image_url' => 'https://example.com/images/i5-14600k.jpg',
+                'image_url' => 'https://images.unsplash.com/photo-1587831990711-23ca6441447b?w=600&h=400&fit=crop',
                 'is_active' => true,
             ],
-
-            // ========== RAM (Category ID: 5) ==========
             [
-                'name' => 'Corsair Vengeance RGB 32GB DDR5 6000MHz',
-                'description' => 'RAM DDR5 32GB (2x16GB) 6000MHz CL36 dengan RGB lighting',
+                'name' => 'AMD Ryzen 7 7800X3D',
+                'description' => 'Processor AMD Ryzen 7 3D V-Cache, 8 core, up to 5.0GHz, 104MB cache, gaming optimized',
+                'price' => 5999000,
+                'stock' => 18,
+                'category_id' => 3,
+                'brand' => 'AMD',
+                'specifications' => json_encode([
+                    'cores' => '8',
+                    'threads' => '16',
+                    'base_clock' => '4.2 GHz',
+                    'max_boost' => '5.0 GHz',
+                    'cache' => '104MB (L2+L3+3D V-Cache)',
+                    'socket' => 'AM5',
+                    'tdp' => '120W',
+                    'graphics' => 'AMD Radeon Graphics'
+                ]),
+                'image_url' => 'https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=600&h=400&fit=crop',
+                'is_active' => true,
+            ],
+            [
+                'name' => 'Intel Core i3-14100',
+                'description' => 'Processor Intel Core i3 gen 14, 4 core, up to 4.7GHz, 12MB cache, budget friendly',
                 'price' => 2499000,
                 'stock' => 30,
-                'category_id' => 5,
-                'brand' => 'Corsair',
+                'category_id' => 3,
+                'brand' => 'Intel',
                 'specifications' => json_encode([
-                    'capacity' => '32GB (2x16GB)',
-                    'speed' => '6000MHz',
-                    'latency' => 'CL36-36-36-76',
-                    'type' => 'DDR5',
-                    'voltage' => '1.35V',
-                    'heatsink' => 'Aluminium dengan RGB',
-                    'compatibility' => 'Intel XMP 3.0, AMD EXPO'
+                    'cores' => '4',
+                    'threads' => '8',
+                    'base_clock' => '3.5 GHz',
+                    'max_turbo' => '4.7 GHz',
+                    'cache' => '12MB Intel Smart Cache',
+                    'socket' => 'LGA1700',
+                    'tdp' => '60W',
+                    'graphics' => 'Intel UHD Graphics 730'
                 ]),
-                'image_url' => 'https://example.com/images/corsair-vengeance-ddr5.jpg',
-                'is_active' => true,
-            ],
-            [
-                'name' => 'G.Skill Trident Z5 RGB 64GB DDR5 6400MHz',
-                'description' => 'RAM DDR5 64GB (2x32GB) 6400MHz CL32 RGB untuk workstation',
-                'price' => 5499000,
-                'stock' => 12,
-                'category_id' => 5,
-                'brand' => 'G.Skill',
-                'specifications' => json_encode([
-                    'capacity' => '64GB (2x32GB)',
-                    'speed' => '6400MHz',
-                    'latency' => 'CL32-39-39-102',
-                    'type' => 'DDR5',
-                    'voltage' => '1.4V',
-                    'heatsink' => 'Aluminium dengan RGB',
-                    'compatibility' => 'Intel XMP 3.0 certified'
-                ]),
-                'image_url' => 'https://example.com/images/gskill-trident-z5.jpg',
-                'is_active' => true,
-            ],
-            [
-                'name' => 'TeamGroup T-Force Delta RGB 16GB DDR4 3600MHz',
-                'description' => 'RAM DDR4 16GB (2x8GB) 3600MHz CL18 RGB budget friendly',
-                'price' => 1199000,
-                'stock' => 50,
-                'category_id' => 5,
-                'brand' => 'TeamGroup',
-                'specifications' => json_encode([
-                    'capacity' => '16GB (2x8GB)',
-                    'speed' => '3600MHz',
-                    'latency' => 'CL18-22-22-42',
-                    'type' => 'DDR4',
-                    'voltage' => '1.35V',
-                    'heatsink' => 'Aluminium dengan RGB',
-                    'compatibility' => 'Intel/AMD'
-                ]),
-                'image_url' => 'https://example.com/images/teamgroup-delta.jpg',
+                'image_url' => 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&h=400&fit=crop',
                 'is_active' => true,
             ],
 
-            // ========== VGA CARD (Category ID: 6) ==========
-            [
-                'name' => 'ASUS ROG Strix GeForce RTX 4090 OC Edition',
-                'description' => 'Kartu grafis NVIDIA RTX 4090 24GB GDDR6X, triple fan, RGB Aura Sync',
-                'price' => 34999000,
-                'stock' => 4,
-                'category_id' => 6,
-                'brand' => 'ASUS',
-                'specifications' => json_encode([
-                    'gpu' => 'NVIDIA GeForce RTX 4090',
-                    'memory' => '24GB GDDR6X',
-                    'memory_speed' => '21 Gbps',
-                    'cuda_cores' => '16384',
-                    'bus_width' => '384-bit',
-                    'power_connectors' => '1x 16-pin',
-                    'recommended_psu' => '1000W',
-                    'length' => '357mm'
-                ]),
-                'image_url' => 'https://example.com/images/asus-rog-rtx4090.jpg',
-                'is_active' => true,
-            ],
-            [
-                'name' => 'MSI GeForce RTX 4070 Ti SUPER Gaming X Slim',
-                'description' => 'Kartu grafis NVIDIA RTX 4070 Ti SUPER 16GB, slim design, dual fan',
-                'price' => 14999000,
-                'stock' => 10,
-                'category_id' => 6,
-                'brand' => 'MSI',
-                'specifications' => json_encode([
-                    'gpu' => 'NVIDIA GeForce RTX 4070 Ti SUPER',
-                    'memory' => '16GB GDDR6X',
-                    'memory_speed' => '21 Gbps',
-                    'cuda_cores' => '8448',
-                    'bus_width' => '256-bit',
-                    'power_connectors' => '1x 16-pin',
-                    'recommended_psu' => '750W',
-                    'length' => '305mm'
-                ]),
-                'image_url' => 'https://example.com/images/msi-rtx4070ti-super.jpg',
-                'is_active' => true,
-            ],
-            [
-                'name' => 'Sapphire Radeon RX 7800 XT Nitro+',
-                'description' => 'Kartu grafis AMD Radeon RX 7800 XT 16GB, triple fan, ARGB lighting',
-                'price' => 10999000,
-                'stock' => 8,
-                'category_id' => 6,
-                'brand' => 'Sapphire',
-                'specifications' => json_encode([
-                    'gpu' => 'AMD Radeon RX 7800 XT',
-                    'memory' => '16GB GDDR6',
-                    'memory_speed' => '19.5 Gbps',
-                    'stream_processors' => '3840',
-                    'bus_width' => '256-bit',
-                    'power_connectors' => '2x 8-pin',
-                    'recommended_psu' => '700W',
-                    'length' => '320mm'
-                ]),
-                'image_url' => 'https://example.com/images/sapphire-rx7800xt.jpg',
-                'is_active' => true,
-            ],
-
-            // ========== STORAGE (Category ID: 7) ==========
-            [
-                'name' => 'Samsung 990 PRO 2TB NVMe SSD',
-                'description' => 'SSD NVMe PCIe 4.0 2TB dengan kecepatan baca 7450MB/s, heatsink',
-                'price' => 3599000,
-                'stock' => 20,
-                'category_id' => 7,
-                'brand' => 'Samsung',
-                'specifications' => json_encode([
-                    'capacity' => '2TB',
-                    'interface' => 'PCIe 4.0 x4',
-                    'read_speed' => '7450 MB/s',
-                    'write_speed' => '6900 MB/s',
-                    'form_factor' => 'M.2 2280',
-                    'nand_type' => '3-bit MLC',
-                    'tbw' => '1200TB',
-                    'warranty' => '5 years'
-                ]),
-                'image_url' => 'https://example.com/images/samsung-990-pro.jpg',
-                'is_active' => true,
-            ],
-            [
-                'name' => 'Western Digital Black SN850X 1TB',
-                'description' => 'SSD NVMe PCIe 4.0 1TB untuk gaming dan creative work',
-                'price' => 1899000,
-                'stock' => 35,
-                'category_id' => 7,
-                'brand' => 'Western Digital',
-                'specifications' => json_encode([
-                    'capacity' => '1TB',
-                    'interface' => 'PCIe 4.0 x4',
-                    'read_speed' => '7300 MB/s',
-                    'write_speed' => '6300 MB/s',
-                    'form_factor' => 'M.2 2280',
-                    'nand_type' => '3D TLC',
-                    'tbw' => '600TB',
-                    'warranty' => '5 years'
-                ]),
-                'image_url' => 'https://example.com/images/wd-sn850x.jpg',
-                'is_active' => true,
-            ],
-            [
-                'name' => 'Seagate Barracuda 4TB HDD',
-                'description' => 'Hard disk 4TB 5400RPM SATA 6Gb/s untuk storage massal',
-                'price' => 1599000,
-                'stock' => 25,
-                'category_id' => 7,
-                'brand' => 'Seagate',
-                'specifications' => json_encode([
-                    'capacity' => '4TB',
-                    'interface' => 'SATA 6Gb/s',
-                    'rpm' => '5400',
-                    'cache' => '256MB',
-                    'form_factor' => '3.5"',
-                    'workload_rate' => '180TB/year',
-                    'warranty' => '2 years'
-                ]),
-                'image_url' => 'https://example.com/images/seagate-barracuda.jpg',
-                'is_active' => true,
-            ],
-
-            // ========== MOTHERBOARD (Category ID: 4) ==========
+            // ========== MOTHERBOARD (Category ID: 4) ========== (5 produk)
             [
                 'name' => 'ASUS ROG Strix Z790-F Gaming WiFi',
                 'description' => 'Motherboard Intel Z790 LGA1700, DDR5, WiFi 6E, 2.5Gb LAN, PCIe 5.0',
@@ -355,7 +334,7 @@ class ProductSeeder extends Seeder
                     'networking' => 'Intel 2.5Gb LAN, WiFi 6E',
                     'audio' => 'ROG SupremeFX 7.1'
                 ]),
-                'image_url' => 'https://example.com/images/asus-z790-f.jpg',
+                'image_url' => 'https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=600&h=400&fit=crop',
                 'is_active' => true,
             ],
             [
@@ -375,11 +354,371 @@ class ProductSeeder extends Seeder
                     'networking' => 'Realtek 2.5Gb LAN, WiFi 6E',
                     'audio' => 'Realtek ALC4080 7.1'
                 ]),
-                'image_url' => 'https://example.com/images/msi-b650-tomahawk.jpg',
+                'image_url' => 'https://images.unsplash.com/photo-1587202372637-5bfb5d5a8d70?w=600&h=400&fit=crop',
+                'is_active' => true,
+            ],
+            [
+                'name' => 'Gigabyte B760 Gaming X AX',
+                'description' => 'Motherboard Intel B760 LGA1700, DDR5, WiFi 6, PCIe 4.0, 2.5Gb LAN',
+                'price' => 3299000,
+                'stock' => 20,
+                'category_id' => 4,
+                'brand' => 'Gigabyte',
+                'specifications' => json_encode([
+                    'socket' => 'LGA1700',
+                    'chipset' => 'Intel B760',
+                    'memory_slots' => '4x DDR5 up to 7600MHz',
+                    'pcie_slots' => '1x PCIe 4.0 x16, 1x PCIe 4.0 x4',
+                    'm2_slots' => '3x M.2 (PCIe 4.0)',
+                    'sata_ports' => '4x SATA 6Gb/s',
+                    'networking' => 'Realtek 2.5Gb LAN, WiFi 6',
+                    'audio' => 'Realtek ALC897 7.1'
+                ]),
+                'image_url' => 'https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=600&h=400&fit=crop',
+                'is_active' => true,
+            ],
+            [
+                'name' => 'ASRock X670E Steel Legend',
+                'description' => 'Motherboard AMD X670E AM5, DDR5, PCIe 5.0, 10+2+1 Power Phase',
+                'price' => 5499000,
+                'stock' => 10,
+                'category_id' => 4,
+                'brand' => 'ASRock',
+                'specifications' => json_encode([
+                    'socket' => 'AM5',
+                    'chipset' => 'AMD X670E',
+                    'memory_slots' => '4x DDR5 up to 6600MHz',
+                    'pcie_slots' => '1x PCIe 5.0 x16, 1x PCIe 5.0 x4',
+                    'm2_slots' => '3x M.2 (PCIe 5.0)',
+                    'sata_ports' => '6x SATA 6Gb/s',
+                    'networking' => 'Killer 2.5Gb LAN',
+                    'audio' => 'Realtek ALC1220 7.1'
+                ]),
+                'image_url' => 'https://images.unsplash.com/photo-1541140532154-b024d705b90a?w=600&h=400&fit=crop',
+                'is_active' => true,
+            ],
+            [
+                'name' => 'ASUS Prime H610M-E D4',
+                'description' => 'Motherboard Intel H610 LGA1700, DDR4, Micro-ATX, budget friendly',
+                'price' => 1499000,
+                'stock' => 25,
+                'category_id' => 4,
+                'brand' => 'ASUS',
+                'specifications' => json_encode([
+                    'socket' => 'LGA1700',
+                    'chipset' => 'Intel H610',
+                    'memory_slots' => '2x DDR4 up to 3200MHz',
+                    'pcie_slots' => '1x PCIe 4.0 x16',
+                    'm2_slots' => '1x M.2 (PCIe 3.0)',
+                    'sata_ports' => '4x SATA 6Gb/s',
+                    'networking' => 'Realtek 1Gb LAN',
+                    'audio' => 'Realtek ALC897 7.1'
+                ]),
+                'image_url' => 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&h=400&fit=crop',
                 'is_active' => true,
             ],
 
-            // ========== POWER SUPPLY (Category ID: 8) ==========
+            // ========== RAM (Category ID: 5) ========== (5 produk)
+            [
+                'name' => 'Corsair Vengeance RGB 32GB DDR5 6000MHz',
+                'description' => 'RAM DDR5 32GB (2x16GB) 6000MHz CL36 dengan RGB lighting',
+                'price' => 2499000,
+                'stock' => 30,
+                'category_id' => 5,
+                'brand' => 'Corsair',
+                'specifications' => json_encode([
+                    'capacity' => '32GB (2x16GB)',
+                    'speed' => '6000MHz',
+                    'latency' => 'CL36-36-36-76',
+                    'type' => 'DDR5',
+                    'voltage' => '1.35V',
+                    'heatsink' => 'Aluminium dengan RGB',
+                    'compatibility' => 'Intel XMP 3.0, AMD EXPO'
+                ]),
+                'image_url' => 'https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=600&h=400&fit=crop',
+                'is_active' => true,
+            ],
+            [
+                'name' => 'G.Skill Trident Z5 RGB 64GB DDR5 6400MHz',
+                'description' => 'RAM DDR5 64GB (2x32GB) 6400MHz CL32 RGB untuk workstation',
+                'price' => 5499000,
+                'stock' => 12,
+                'category_id' => 5,
+                'brand' => 'G.Skill',
+                'specifications' => json_encode([
+                    'capacity' => '64GB (2x32GB)',
+                    'speed' => '6400MHz',
+                    'latency' => 'CL32-39-39-102',
+                    'type' => 'DDR5',
+                    'voltage' => '1.4V',
+                    'heatsink' => 'Aluminium dengan RGB',
+                    'compatibility' => 'Intel XMP 3.0 certified'
+                ]),
+                'image_url' => 'https://images.unsplash.com/photo-1587202372637-5bfb5d5a8d70?w=600&h=400&fit=crop',
+                'is_active' => true,
+            ],
+            [
+                'name' => 'TeamGroup T-Force Delta RGB 16GB DDR4 3600MHz',
+                'description' => 'RAM DDR4 16GB (2x8GB) 3600MHz CL18 RGB budget friendly',
+                'price' => 1199000,
+                'stock' => 50,
+                'category_id' => 5,
+                'brand' => 'TeamGroup',
+                'specifications' => json_encode([
+                    'capacity' => '16GB (2x8GB)',
+                    'speed' => '3600MHz',
+                    'latency' => 'CL18-22-22-42',
+                    'type' => 'DDR4',
+                    'voltage' => '1.35V',
+                    'heatsink' => 'Aluminium dengan RGB',
+                    'compatibility' => 'Intel/AMD'
+                ]),
+                'image_url' => 'https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=600&h=400&fit=crop',
+                'is_active' => true,
+            ],
+            [
+                'name' => 'Kingston FURY Beast 16GB DDR5 5200MHz',
+                'description' => 'RAM DDR5 16GB (1x16GB) 5200MHz CL40, plug and play',
+                'price' => 899000,
+                'stock' => 40,
+                'category_id' => 5,
+                'brand' => 'Kingston',
+                'specifications' => json_encode([
+                    'capacity' => '16GB (1x16GB)',
+                    'speed' => '5200MHz',
+                    'latency' => 'CL40',
+                    'type' => 'DDR5',
+                    'voltage' => '1.1V',
+                    'heatsink' => 'Aluminium heatsink',
+                    'compatibility' => 'Intel/AMD Ready'
+                ]),
+                'image_url' => 'https://images.unsplash.com/photo-1541140532154-b024d705b90a?w=600&h=400&fit=crop',
+                'is_active' => true,
+            ],
+            [
+                'name' => 'ADATA XPG Lancer RGB 32GB DDR5 6000MHz',
+                'description' => 'RAM DDR5 32GB (2x16GB) 6000MHz CL30, ARGB sync with motherboard',
+                'price' => 2899000,
+                'stock' => 15,
+                'category_id' => 5,
+                'brand' => 'ADATA',
+                'specifications' => json_encode([
+                    'capacity' => '32GB (2x16GB)',
+                    'speed' => '6000MHz',
+                    'latency' => 'CL30-40-40',
+                    'type' => 'DDR5',
+                    'voltage' => '1.35V',
+                    'heatsink' => 'Aluminium ARGB heatsink',
+                    'compatibility' => 'Intel XMP 3.0, AMD EXPO'
+                ]),
+                'image_url' => 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&h=400&fit=crop',
+                'is_active' => true,
+            ],
+
+            // ========== VGA CARD (Category ID: 6) ========== (5 produk)
+            [
+                'name' => 'ASUS ROG Strix GeForce RTX 4090 OC Edition',
+                'description' => 'Kartu grafis NVIDIA RTX 4090 24GB GDDR6X, triple fan, RGB Aura Sync',
+                'price' => 34999000,
+                'stock' => 4,
+                'category_id' => 6,
+                'brand' => 'ASUS',
+                'specifications' => json_encode([
+                    'gpu' => 'NVIDIA GeForce RTX 4090',
+                    'memory' => '24GB GDDR6X',
+                    'memory_speed' => '21 Gbps',
+                    'cuda_cores' => '16384',
+                    'bus_width' => '384-bit',
+                    'power_connectors' => '1x 16-pin',
+                    'recommended_psu' => '1000W',
+                    'length' => '357mm'
+                ]),
+                'image_url' => 'https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=600&h=400&fit=crop',
+                'is_active' => true,
+            ],
+            [
+                'name' => 'MSI GeForce RTX 4070 Ti SUPER Gaming X Slim',
+                'description' => 'Kartu grafis NVIDIA RTX 4070 Ti SUPER 16GB, slim design, dual fan',
+                'price' => 14999000,
+                'stock' => 10,
+                'category_id' => 6,
+                'brand' => 'MSI',
+                'specifications' => json_encode([
+                    'gpu' => 'NVIDIA GeForce RTX 4070 Ti SUPER',
+                    'memory' => '16GB GDDR6X',
+                    'memory_speed' => '21 Gbps',
+                    'cuda_cores' => '8448',
+                    'bus_width' => '256-bit',
+                    'power_connectors' => '1x 16-pin',
+                    'recommended_psu' => '750W',
+                    'length' => '305mm'
+                ]),
+                'image_url' => 'https://images.unsplash.com/photo-1587202372637-5bfb5d5a8d70?w=600&h=400&fit=crop',
+                'is_active' => true,
+            ],
+            [
+                'name' => 'Sapphire Radeon RX 7800 XT Nitro+',
+                'description' => 'Kartu grafis AMD Radeon RX 7800 XT 16GB, triple fan, ARGB lighting',
+                'price' => 10999000,
+                'stock' => 8,
+                'category_id' => 6,
+                'brand' => 'Sapphire',
+                'specifications' => json_encode([
+                    'gpu' => 'AMD Radeon RX 7800 XT',
+                    'memory' => '16GB GDDR6',
+                    'memory_speed' => '19.5 Gbps',
+                    'stream_processors' => '3840',
+                    'bus_width' => '256-bit',
+                    'power_connectors' => '2x 8-pin',
+                    'recommended_psu' => '700W',
+                    'length' => '320mm'
+                ]),
+                'image_url' => 'https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=600&h=400&fit=crop',
+                'is_active' => true,
+            ],
+            [
+                'name' => 'Gigabyte GeForce RTX 4060 Ti Eagle OC 8G',
+                'description' => 'Kartu grafis NVIDIA RTX 4060 Ti 8GB, dual fan, untuk gaming 1080p',
+                'price' => 6999000,
+                'stock' => 20,
+                'category_id' => 6,
+                'brand' => 'Gigabyte',
+                'specifications' => json_encode([
+                    'gpu' => 'NVIDIA GeForce RTX 4060 Ti',
+                    'memory' => '8GB GDDR6',
+                    'memory_speed' => '18 Gbps',
+                    'cuda_cores' => '4352',
+                    'bus_width' => '128-bit',
+                    'power_connectors' => '1x 8-pin',
+                    'recommended_psu' => '550W',
+                    'length' => '282mm'
+                ]),
+                'image_url' => 'https://images.unsplash.com/photo-1541140532154-b024d705b90a?w=600&h=400&fit=crop',
+                'is_active' => true,
+            ],
+            [
+                'name' => 'ASUS Dual GeForce RTX 3050 OC Edition 6GB',
+                'description' => 'Kartu grafis NVIDIA RTX 3050 6GB, dual fan, entry-level gaming',
+                'price' => 3999000,
+                'stock' => 25,
+                'category_id' => 6,
+                'brand' => 'ASUS',
+                'specifications' => json_encode([
+                    'gpu' => 'NVIDIA GeForce RTX 3050',
+                    'memory' => '6GB GDDR6',
+                    'memory_speed' => '14 Gbps',
+                    'cuda_cores' => '2560',
+                    'bus_width' => '96-bit',
+                    'power_connectors' => '1x 8-pin',
+                    'recommended_psu' => '450W',
+                    'length' => '200mm'
+                ]),
+                'image_url' => 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&h=400&fit=crop',
+                'is_active' => true,
+            ],
+
+            // ========== STORAGE (Category ID: 7) ========== (5 produk)
+            [
+                'name' => 'Samsung 990 PRO 2TB NVMe SSD',
+                'description' => 'SSD NVMe PCIe 4.0 2TB dengan kecepatan baca 7450MB/s, heatsink',
+                'price' => 3599000,
+                'stock' => 20,
+                'category_id' => 7,
+                'brand' => 'Samsung',
+                'specifications' => json_encode([
+                    'capacity' => '2TB',
+                    'interface' => 'PCIe 4.0 x4',
+                    'read_speed' => '7450 MB/s',
+                    'write_speed' => '6900 MB/s',
+                    'form_factor' => 'M.2 2280',
+                    'nand_type' => '3-bit MLC',
+                    'tbw' => '1200TB',
+                    'warranty' => '5 years'
+                ]),
+                'image_url' => 'https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=600&h=400&fit=crop',
+                'is_active' => true,
+            ],
+            [
+                'name' => 'Western Digital Black SN850X 1TB',
+                'description' => 'SSD NVMe PCIe 4.0 1TB untuk gaming dan creative work',
+                'price' => 1899000,
+                'stock' => 35,
+                'category_id' => 7,
+                'brand' => 'Western Digital',
+                'specifications' => json_encode([
+                    'capacity' => '1TB',
+                    'interface' => 'PCIe 4.0 x4',
+                    'read_speed' => '7300 MB/s',
+                    'write_speed' => '6300 MB/s',
+                    'form_factor' => 'M.2 2280',
+                    'nand_type' => '3D TLC',
+                    'tbw' => '600TB',
+                    'warranty' => '5 years'
+                ]),
+                'image_url' => 'https://images.unsplash.com/photo-1587202372637-5bfb5d5a8d70?w=600&h=400&fit=crop',
+                'is_active' => true,
+            ],
+            [
+                'name' => 'Seagate Barracuda 4TB HDD',
+                'description' => 'Hard disk 4TB 5400RPM SATA 6Gb/s untuk storage massal',
+                'price' => 1599000,
+                'stock' => 25,
+                'category_id' => 7,
+                'brand' => 'Seagate',
+                'specifications' => json_encode([
+                    'capacity' => '4TB',
+                    'interface' => 'SATA 6Gb/s',
+                    'rpm' => '5400',
+                    'cache' => '256MB',
+                    'form_factor' => '3.5"',
+                    'workload_rate' => '180TB/year',
+                    'warranty' => '2 years'
+                ]),
+                'image_url' => 'https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=600&h=400&fit=crop',
+                'is_active' => true,
+            ],
+            [
+                'name' => 'Crucial P3 Plus 500GB NVMe SSD',
+                'description' => 'SSD NVMe PCIe 4.0 500GB, kecepatan baca 5000MB/s, value for money',
+                'price' => 799000,
+                'stock' => 40,
+                'category_id' => 7,
+                'brand' => 'Crucial',
+                'specifications' => json_encode([
+                    'capacity' => '500GB',
+                    'interface' => 'PCIe 4.0 x4',
+                    'read_speed' => '5000 MB/s',
+                    'write_speed' => '3600 MB/s',
+                    'form_factor' => 'M.2 2280',
+                    'nand_type' => 'QLC',
+                    'tbw' => '220TB',
+                    'warranty' => '5 years'
+                ]),
+                'image_url' => 'https://images.unsplash.com/photo-1541140532154-b024d705b90a?w=600&h=400&fit=crop',
+                'is_active' => true,
+            ],
+            [
+                'name' => 'Kingston NV2 1TB NVMe SSD',
+                'description' => 'SSD NVMe PCIe 4.0 1TB, kecepatan baca 3500MB/s, budget friendly',
+                'price' => 899000,
+                'stock' => 45,
+                'category_id' => 7,
+                'brand' => 'Kingston',
+                'specifications' => json_encode([
+                    'capacity' => '1TB',
+                    'interface' => 'PCIe 4.0 x4',
+                    'read_speed' => '3500 MB/s',
+                    'write_speed' => '2100 MB/s',
+                    'form_factor' => 'M.2 2280',
+                    'nand_type' => 'QLC',
+                    'tbw' => '320TB',
+                    'warranty' => '3 years'
+                ]),
+                'image_url' => 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&h=400&fit=crop',
+                'is_active' => true,
+            ],
+
+            // ========== POWER SUPPLY (Category ID: 8) ========== (5 produk)
             [
                 'name' => 'Corsair RM1000x SHIFT 1000W 80+ Gold',
                 'description' => 'PSU 1000W 80+ Gold fully modular, ATX 3.0, PCIe 5.0, side-connect',
@@ -396,7 +735,7 @@ class ProductSeeder extends Seeder
                     'fan' => '140mm Fluid Dynamic Bearing',
                     'warranty' => '10 years'
                 ]),
-                'image_url' => 'https://example.com/images/corsair-rm1000x-shift.jpg',
+                'image_url' => 'https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=600&h=400&fit=crop',
                 'is_active' => true,
             ],
             [
@@ -415,11 +754,68 @@ class ProductSeeder extends Seeder
                     'protections' => 'OVP, UVP, OCP, OPP, SCP, OTP',
                     'warranty' => '10 years'
                 ]),
-                'image_url' => 'https://example.com/images/seasonic-focus-gx850.jpg',
+                'image_url' => 'https://images.unsplash.com/photo-1587202372637-5bfb5d5a8d70?w=600&h=400&fit=crop',
+                'is_active' => true,
+            ],
+            [
+                'name' => 'Cooler Master MWE Gold 750 V2',
+                'description' => 'PSU 750W 80+ Gold fully modular, silent fan, untuk mid-range build',
+                'price' => 1499000,
+                'stock' => 25,
+                'category_id' => 8,
+                'brand' => 'Cooler Master',
+                'specifications' => json_encode([
+                    'wattage' => '750W',
+                    'efficiency' => '80 Plus Gold',
+                    'modular' => 'Fully Modular',
+                    'connectors' => '2x PCIe 6+2, 6x SATA',
+                    'fan' => '120mm Silent Fan',
+                    'protections' => 'OVP, UVP, OCP, OPP, SCP',
+                    'warranty' => '5 years'
+                ]),
+                'image_url' => 'https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=600&h=400&fit=crop',
+                'is_active' => true,
+            ],
+            [
+                'name' => 'be quiet! Straight Power 11 650W Platinum',
+                'description' => 'PSU 650W 80+ Platinum fully modular, ultra silent, German quality',
+                'price' => 1899000,
+                'stock' => 15,
+                'category_id' => 8,
+                'brand' => 'be quiet!',
+                'specifications' => json_encode([
+                    'wattage' => '650W',
+                    'efficiency' => '80 Plus Platinum',
+                    'modular' => 'Fully Modular',
+                    'connectors' => '4x PCIe 6+2, 8x SATA',
+                    'fan' => '135mm Silent Wings 3',
+                    'protections' => 'Full protection suite',
+                    'warranty' => '5 years'
+                ]),
+                'image_url' => 'https://images.unsplash.com/photo-1541140532154-b024d705b90a?w=600&h=400&fit=crop',
+                'is_active' => true,
+            ],
+            [
+                'name' => 'FSP Hydro G Pro 1000W 80+ Gold',
+                'description' => 'PSU 1000W 80+ Gold, ATX 3.0 ready, PCIe 5.0, 100% Japanese capacitors',
+                'price' => 2799000,
+                'stock' => 10,
+                'category_id' => 8,
+                'brand' => 'FSP',
+                'specifications' => json_encode([
+                    'wattage' => '1000W',
+                    'efficiency' => '80 Plus Gold',
+                    'modular' => 'Fully Modular',
+                    'atx_version' => 'ATX 3.0 & PCIe 5.0',
+                    'connectors' => '1x 12VHPWR, 6x PCIe, 12x SATA',
+                    'fan' => '135mm Hydraulic Bearing',
+                    'warranty' => '10 years'
+                ]),
+                'image_url' => 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&h=400&fit=crop',
                 'is_active' => true,
             ],
 
-            // ========== CASING (Category ID: 9) ==========
+            // ========== CASING (Category ID: 9) ========== (5 produk)
             [
                 'name' => 'Lian Li O11 Dynamic EVO RGB',
                 'description' => 'Casing mid-tower dual chamber, tempered glass, support 420mm radiator',
@@ -437,7 +833,7 @@ class ProductSeeder extends Seeder
                     'psu_length' => 'up to 210mm',
                     'material' => 'Steel, Tempered Glass'
                 ]),
-                'image_url' => 'https://example.com/images/lian-li-o11-evo.jpg',
+                'image_url' => 'https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=600&h=400&fit=crop',
                 'is_active' => true,
             ],
             [
@@ -457,11 +853,71 @@ class ProductSeeder extends Seeder
                     'psu_length' => 'up to 170mm',
                     'front_panel' => 'Oak wood with mesh'
                 ]),
-                'image_url' => 'https://example.com/images/fractal-north.jpg',
+                'image_url' => 'https://images.unsplash.com/photo-1587202372637-5bfb5d5a8d70?w=600&h=400&fit=crop',
+                'is_active' => true,
+            ],
+            [
+                'name' => 'NZXT H9 Flow Dual-Chamber',
+                'description' => 'Casing mid-tower dual chamber, all-glass design, excellent airflow',
+                'price' => 2799000,
+                'stock' => 12,
+                'category_id' => 9,
+                'brand' => 'NZXT',
+                'specifications' => json_encode([
+                    'form_factor' => 'Mid-Tower',
+                    'motherboard' => 'ATX, Micro-ATX, Mini-ITX',
+                    'expansion_slots' => '7',
+                    'radiator_support' => '360mm top/side, 280mm front',
+                    'fan_support' => '10x 120mm or 4x 140mm',
+                    'gpu_length' => 'up to 435mm',
+                    'psu_length' => 'up to 200mm',
+                    'material' => 'Steel, Tempered Glass'
+                ]),
+                'image_url' => 'https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=600&h=400&fit=crop',
+                'is_active' => true,
+            ],
+            [
+                'name' => 'Corsair 4000D Airflow',
+                'description' => 'Casing mid-tower airflow focused, front mesh panel, cable management',
+                'price' => 1499000,
+                'stock' => 20,
+                'category_id' => 9,
+                'brand' => 'Corsair',
+                'specifications' => json_encode([
+                    'form_factor' => 'Mid-Tower',
+                    'motherboard' => 'ATX, Micro-ATX, Mini-ITX',
+                    'expansion_slots' => '7',
+                    'radiator_support' => '360mm front, 280mm top',
+                    'fan_support' => '6x 120mm',
+                    'gpu_length' => 'up to 360mm',
+                    'psu_length' => 'up to 180mm',
+                    'material' => 'Steel, Mesh front'
+                ]),
+                'image_url' => 'https://images.unsplash.com/photo-1541140532154-b024d705b90a?w=600&h=400&fit=crop',
+                'is_active' => true,
+            ],
+            [
+                'name' => 'Cooler Master MasterBox Q300L',
+                'description' => 'Casing micro-ATX compact, mesh design, customizable, budget friendly',
+                'price' => 799000,
+                'stock' => 30,
+                'category_id' => 9,
+                'brand' => 'Cooler Master',
+                'specifications' => json_encode([
+                    'form_factor' => 'Micro-ATX',
+                    'motherboard' => 'Micro-ATX, Mini-ITX',
+                    'expansion_slots' => '4',
+                    'radiator_support' => '240mm front',
+                    'fan_support' => '5x 120mm',
+                    'gpu_length' => 'up to 360mm',
+                    'psu_length' => 'up to 180mm',
+                    'material' => 'ABS, Steel mesh'
+                ]),
+                'image_url' => 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&h=400&fit=crop',
                 'is_active' => true,
             ],
 
-            // ========== MONITOR (Category ID: 10) ==========
+            // ========== MONITOR (Category ID: 10) ========== (5 produk)
             [
                 'name' => 'Samsung Odyssey G9 49" DQHD 240Hz',
                 'description' => 'Monitor curved 49" 5120x1440 240Hz, 1000R curvature, QLED, HDR2000',
@@ -479,7 +935,7 @@ class ProductSeeder extends Seeder
                     'hdr' => 'HDR2000',
                     'ports' => 'DisplayPort 1.4, HDMI 2.1'
                 ]),
-                'image_url' => 'https://example.com/images/samsung-odyssey-g9.jpg',
+                'image_url' => 'https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=600&h=400&fit=crop',
                 'is_active' => true,
             ],
             [
@@ -499,7 +955,7 @@ class ProductSeeder extends Seeder
                     'hdr' => 'HDR10',
                     'ports' => 'DisplayPort 1.4, HDMI 2.0'
                 ]),
-                'image_url' => 'https://example.com/images/lg-27gp850.jpg',
+                'image_url' => 'https://images.unsplash.com/photo-1587202372637-5bfb5d5a8d70?w=600&h=400&fit=crop',
                 'is_active' => true,
             ],
             [
@@ -519,11 +975,51 @@ class ProductSeeder extends Seeder
                     'speakers' => '2x 3W',
                     'ports' => 'USB-C, HDMI 2.0, DisplayPort'
                 ]),
-                'image_url' => 'https://example.com/images/dell-s2722qc.jpg',
+                'image_url' => 'https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=600&h=400&fit=crop',
+                'is_active' => true,
+            ],
+            [
+                'name' => 'ASUS TUF Gaming VG249Q1A 24" 165Hz',
+                'description' => 'Monitor gaming 24" Full HD 165Hz, IPS, 1ms, FreeSync Premium, Eye Care',
+                'price' => 2799000,
+                'stock' => 20,
+                'category_id' => 10,
+                'brand' => 'ASUS',
+                'specifications' => json_encode([
+                    'size' => '23.8"',
+                    'resolution' => 'Full HD (1920x1080)',
+                    'refresh_rate' => '165Hz',
+                    'response_time' => '1ms MPRT',
+                    'panel_type' => 'IPS',
+                    'adaptive_sync' => 'FreeSync Premium',
+                    'features' => 'Extreme Low Motion Blur, Eye Care',
+                    'ports' => 'DisplayPort, HDMI, VGA'
+                ]),
+                'image_url' => 'https://images.unsplash.com/photo-1541140532154-b024d705b90a?w=600&h=400&fit=crop',
+                'is_active' => true,
+            ],
+            [
+                'name' => 'Acer Nitro XV272U 27" 170Hz',
+                'description' => 'Monitor gaming 27" QHD 170Hz, IPS, 0.5ms, AMD FreeSync, HDR10',
+                'price' => 4499000,
+                'stock' => 15,
+                'category_id' => 10,
+                'brand' => 'Acer',
+                'specifications' => json_encode([
+                    'size' => '27"',
+                    'resolution' => 'QHD (2560x1440)',
+                    'refresh_rate' => '170Hz',
+                    'response_time' => '0.5ms VRB',
+                    'panel_type' => 'IPS',
+                    'adaptive_sync' => 'AMD FreeSync',
+                    'hdr' => 'HDR10',
+                    'ports' => 'DisplayPort 1.2, HDMI 2.0'
+                ]),
+                'image_url' => 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&h=400&fit=crop',
                 'is_active' => true,
             ],
 
-            // ========== KEYBOARD & MOUSE (Category ID: 11) ==========
+            // ========== KEYBOARD & MOUSE (Category ID: 11) ========== (5 produk)
             [
                 'name' => 'Razer BlackWidow V4 Pro',
                 'description' => 'Keyboard mechanical gaming Razer Green switches, per-key RGB, dial kontrol',
@@ -540,7 +1036,7 @@ class ProductSeeder extends Seeder
                     'construction' => 'Aluminium top plate',
                     'warranty' => '2 years'
                 ]),
-                'image_url' => 'https://example.com/images/razer-blackwidow-v4.jpg',
+                'image_url' => 'https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=600&h=400&fit=crop',
                 'is_active' => true,
             ],
             [
@@ -560,11 +1056,69 @@ class ProductSeeder extends Seeder
                     'buttons' => '5 programmable',
                     'warranty' => '2 years'
                 ]),
-                'image_url' => 'https://example.com/images/logitech-gpro-superlight.jpg',
+                'image_url' => 'https://images.unsplash.com/photo-1587202372637-5bfb5d5a8d70?w=600&h=400&fit=crop',
+                'is_active' => true,
+            ],
+            [
+                'name' => 'SteelSeries Apex Pro TKL Wireless',
+                'description' => 'Keyboard mechanical wireless OmniPoint 2.0 switches, OLED display',
+                'price' => 3999000,
+                'stock' => 10,
+                'category_id' => 11,
+                'brand' => 'SteelSeries',
+                'specifications' => json_encode([
+                    'switch_type' => 'OmniPoint 2.0 Adjustable',
+                    'layout' => 'TKL 87 keys',
+                    'lighting' => 'RGB per-key',
+                    'features' => 'OLED display, adjustable actuation',
+                    'connectivity' => 'Bluetooth, 2.4GHz Wireless, USB-C',
+                    'battery' => '40 hours',
+                    'warranty' => '2 years'
+                ]),
+                'image_url' => 'https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=600&h=400&fit=crop',
+                'is_active' => true,
+            ],
+            [
+                'name' => 'Razer Viper V2 Pro HyperSpeed',
+                'description' => 'Mouse gaming wireless 58g, Focus Pro 30K sensor, 80 jam baterai',
+                'price' => 2499000,
+                'stock' => 15,
+                'category_id' => 11,
+                'brand' => 'Razer',
+                'specifications' => json_encode([
+                    'sensor' => 'Focus Pro 30K Optical',
+                    'polling_rate' => '1000Hz',
+                    'dpi' => '100 - 30,000',
+                    'weight' => '58g',
+                    'battery' => '80 hours',
+                    'connectivity' => 'HyperSpeed Wireless, USB-C',
+                    'buttons' => '5 programmable',
+                    'warranty' => '2 years'
+                ]),
+                'image_url' => 'https://images.unsplash.com/photo-1541140532154-b024d705b90a?w=600&h=400&fit=crop',
+                'is_active' => true,
+            ],
+            [
+                'name' => 'Keychron K8 Pro Wireless Mechanical Keyboard',
+                'description' => 'Keyboard mechanical wireless hot-swappable, Gateron switches, Mac/Windows',
+                'price' => 1799000,
+                'stock' => 20,
+                'category_id' => 11,
+                'brand' => 'Keychron',
+                'specifications' => json_encode([
+                    'switch_type' => 'Gateron G Pro (Hot-swappable)',
+                    'layout' => 'TKL 87 keys',
+                    'lighting' => 'White backlight',
+                    'features' => 'Hot-swappable, Mac/Windows compatible',
+                    'connectivity' => 'Bluetooth 5.1, USB-C',
+                    'battery' => '4000mAh (up to 240 hours)',
+                    'construction' => 'Aluminium frame, ABS keycaps'
+                ]),
+                'image_url' => 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&h=400&fit=crop',
                 'is_active' => true,
             ],
 
-            // ========== COOLING (Category ID: 12) ==========
+            // ========== COOLING (Category ID: 12) ========== (5 produk)
             [
                 'name' => 'NZXT Kraken Elite 360 RGB',
                 'description' => 'AIO liquid cooler 360mm, LCD display, RGB fans, untuk LGA1700/AM5',
@@ -582,7 +1136,87 @@ class ProductSeeder extends Seeder
                     'software' => 'NZXT CAM',
                     'warranty' => '6 years'
                 ]),
-                'image_url' => 'https://example.com/images/nzxt-kraken-elite.jpg',
+                'image_url' => 'https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=600&h=400&fit=crop',
+                'is_active' => true,
+            ],
+            [
+                'name' => 'Noctua NH-D15 chromax.black',
+                'description' => 'CPU air cooler dual tower, 2x NF-A15 fans, untuk high-end processor',
+                'price' => 1499000,
+                'stock' => 15,
+                'category_id' => 12,
+                'brand' => 'Noctua',
+                'specifications' => json_encode([
+                    'type' => 'Air Cooler',
+                    'heatpipes' => '6x',
+                    'fans' => '2x NF-A15 140mm',
+                    'fan_rpm' => '300 - 1500 RPM',
+                    'socket_support' => 'Intel LGA1700, AMD AM5',
+                    'max_tdp' => '250W',
+                    'noise_level' => '24.6 dB(A)',
+                    'warranty' => '6 years'
+                ]),
+                'image_url' => 'https://images.unsplash.com/photo-1587202372637-5bfb5d5a8d70?w=600&h=400&fit=crop',
+                'is_active' => true,
+            ],
+            [
+                'name' => 'Corsair iCUE H150i ELITE CAPELLIX XT',
+                'description' => 'AIO liquid cooler 360mm, RGB fans, Commander Core controller',
+                'price' => 2999000,
+                'stock' => 12,
+                'category_id' => 12,
+                'brand' => 'Corsair',
+                'specifications' => json_encode([
+                    'type' => 'AIO Liquid Cooler',
+                    'radiator_size' => '360mm',
+                    'fans' => '3x 120mm RGB',
+                    'pump_rpm' => '2400 RPM',
+                    'socket_support' => 'Intel LGA1700, AMD AM5',
+                    'features' => 'Zero RPM fan mode',
+                    'software' => 'Corsair iCUE',
+                    'warranty' => '5 years'
+                ]),
+                'image_url' => 'https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=600&h=400&fit=crop',
+                'is_active' => true,
+            ],
+            [
+                'name' => 'Cooler Master Hyper 212 Black Edition',
+                'description' => 'CPU air cooler single tower, 120mm fan, value for money',
+                'price' => 599000,
+                'stock' => 30,
+                'category_id' => 12,
+                'brand' => 'Cooler Master',
+                'specifications' => json_encode([
+                    'type' => 'Air Cooler',
+                    'heatpipes' => '4x',
+                    'fans' => '1x 120mm',
+                    'fan_rpm' => '650 - 2000 RPM',
+                    'socket_support' => 'Intel LGA1700, AMD AM5',
+                    'max_tdp' => '150W',
+                    'noise_level' => '26 dB(A)',
+                    'warranty' => '2 years'
+                ]),
+                'image_url' => 'https://images.unsplash.com/photo-1541140532154-b024d705b90a?w=600&h=400&fit=crop',
+                'is_active' => true,
+            ],
+            [
+                'name' => 'Thermal Grizzly Kryonaut Thermal Paste 1g',
+                'description' => 'Thermal paste high-performance, 12.5 W/mK conductivity, untuk overclocking',
+                'price' => 199000,
+                'stock' => 50,
+                'category_id' => 12,
+                'brand' => 'Thermal Grizzly',
+                'specifications' => json_encode([
+                    'type' => 'Thermal Paste',
+                    'conductivity' => '12.5 W/mK',
+                    'viscosity' => '190 - 230 Pa·s',
+                    'density' => '3.8 g/cm³',
+                    'temperature_range' => '-250°C to +350°C',
+                    'application' => 'CPU/GPU',
+                    'quantity' => '1 gram',
+                    'features' => 'Non-conductive, non-capacitive'
+                ]),
+                'image_url' => 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&h=400&fit=crop',
                 'is_active' => true,
             ]
         ];
